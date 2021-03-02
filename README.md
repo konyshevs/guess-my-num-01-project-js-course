@@ -5,7 +5,7 @@ Enter your guess
 See if your guess is too high or too low
 Change your guess
 
-https://guess-my-num-ks.netlify.app
+Project URL: https://guess-my-num-ks.netlify.app
 
 Project № 1 of course "The Complete JavaScript Course 2021: From Zero to Expert!" by Jonas Schmedtmann
 https://www.udemy.com/course/the-complete-javascript-course/
