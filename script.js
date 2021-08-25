@@ -4,15 +4,7 @@ function displayMessage(message) {
   document.querySelector('.message').textContent = message;
 }
 
-const atNum = 100;
-let secretNum = Math.floor(Math.random() * atNum) + 1;
-let score = 10;
-let highScore = 0;
-//Refresh game rules
-document.querySelector('.score').textContent = score;
-document.querySelector('.between').textContent = 'Between 1 and ' + atNum;
-//'Check' button
-document.querySelector('.check').addEventListener('click', function () {
+function checkNum(){
   const guess = Number(document.querySelector('.guess').value);
   if (score > 0) {
     //When there is no input
@@ -37,7 +29,21 @@ document.querySelector('.check').addEventListener('click', function () {
       if (score <= 0) displayMessage('You lose the game!');
     }
   }
+}
+
+const atNum = 100;
+let secretNum = Math.floor(Math.random() * atNum) + 1;
+let score = 10;
+let highScore = 0;
+//Refresh game rules
+document.querySelector('.score').textContent = score;
+document.querySelector('.between').textContent = 'Between 1 and ' + atNum;
+//'Check' button
+document.querySelector('.check').addEventListener('click', checkNum);
+document.addEventListener('keydown', function(e){
+  if(e.code === 'Enter' || e.code === 'NumpadEnter') checkNum()
 });
+
 
 //'Again' button
 document.querySelector('.again').addEventListener('click', function () {
